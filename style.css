@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Supermercado+One&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+.main_site{
+    height: 947px;
+    width: 1920px;
+    min-width: 1920px;
+    background: url(./image/1611928658_29-p-zadnii-fon-dlya-igri-30.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.24);
+    display: flex;
+    
+}
+.menu{
+    width: 100%;
+}
+.navbar{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6,0.8fr);
+    /* grid-gap: 20px; */
+    justify-content: center;
+    align-content: center;
+    /* background-color: wheat; */
+}
+.navbar li{
+    text-align: center;
+}
+.burger{
+    top: 13px;
+    left: 7px;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    z-index: 5;
+}
+.burger::after {
+    content: " ";
+    height: 2px;
+    width: 14px;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: 19px;
+    display: none;
+    transition: all .6s
+}
+.burger span{
+    left: 10px;
+    top: 20px;
+    position: absolute;
+    height: 2px;
+    width: 14px;
+    background-color: white;
+    transition: all .6s linear;
+}
+.burger::before{
+    content: " ";
+    height: 2px;
+    width: 18px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    transition: all .6s linear;
+}
+.list i{
+    font-size: 28px;
+    transition: all .6s linear;
+    color: white;
+    opacity: 0.4;
+    position: relative;
+}
+.ideas{
+    position: fixed;
+    top: 0px;
+    left: -100%;
+    width: 10%;
+    height: 100%;
+    background-color: #0d152bc7;
+    transition: all .5s linear;
+    text-align: center;
+    
+}
+.ideas.active{
+    /* top: 40px; */
+    left: 0;
+    z-index: 4;
+}
+.ideas li{
+    /* color: white; */
+    padding-left: 0;
+    margin-top: 10px;
+}
+.ideas ul{
+    padding-top: 60px;
+    padding-left: 0;
+}
+.ideas .list a{
+    text-decoration: none;
+    /* opacity: 0.1; */
+}
+.ideas .list li{
+    /* opacity: 0.4; */
+    margin-top: 120px;
+    transition: all .3s linear;
+    /* width: 50px; */   
+}
+.ideas .list .cst li .fa-home::after{
+    content: "Home";
+    position: absolute;
+    bottom: -26px;
+    right: -8px;
+    font-size: 18px;
+    display: none;
+
+}
+.ideas .list .cst li .fa-shopping-basket::after{
+    content: "Basket";
+    position: absolute;
+    bottom: -26px;
+    right: -10px;
+    font-size: 18px;
+    display: none;
+
+}
+.ideas .list .cst li .fa-calendar-day::after{
+    content: "Calendar";
+    position: absolute;
+    bottom: -26px;
+    right: -25px;
+    font-size: 18px;
+    display: none;
+
+}
+.ideas .list .cst li .fa-comments::after{
+    content: "News";
+    position: absolute;
+    bottom: -26px;
+    right: -6px;
+    font-size: 18px;
+    display: none;
+
+}
+.ideas .list .cst li .fa-users::after{
+    content: "Friends";
+    position: absolute;
+    bottom: -26px;
+    right: -15px;
+    font-size: 18px;
+    display: none;
+
+}
+.ideas.active .list .cst li i:hover:after{
+    display: block;
+}
+.ideas.active .list i:hover{
+    /* text-decoration: none; */
+    opacity: 1;
+    color: wheat;
+}
+.burger.active span{
+    width: 15px;
+    top: 13px;
+    transform: rotate(20deg);
+    transition: all .6s linear;
+}
+.burger.active::after{
+     display:block;
+     top: 8px;
+     transform: rotate(-20deg);
+     left: 10px;
+     width: 15px;
+     transition: all .6s linear;
+}
+.burger.active::before{
+    width: 26px;
+    transition: all .6s linear;
+}
+.burger.active{
+    
+    /* margin-right: 200px; */
+    transition: all .6s linear;
+}
+.ideas ul{
+    padding-top: 60px;
+    padding-left: 0;
+}
+.log{
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    /* border: 2px solid rgb(0, 147, 245); */
+    border-radius: 15px;
+    background-color: rgb(0, 147, 245);
+    transition: all .6s linear;
+}
+.log:hover{
+   opacity: .8;
+}
+.navbar li a{
+    color: white;
+}
+.mst{
+    position: relative;
+}
+.mst::after{
+    display: block;
+    position: absolute;
+    left: 0; 
+    width: 0;
+    height: 2px; 
+    background-color: #fcfcfc; 
+    content: "";
+    transition: width 0.3s ease-out;
+}
+.mst:hover:after,
+.mst:focus:after{
+    width: 100%;
+}
+
+.content{
+    /* margin-top: 30px; */
+    display: grid;
+    grid-template-areas:
+    'welcome welcome welcome albom1'
+    'welcome welcome welcome albom2'
+    'welcome welcome welcome albom3' ;
+    grid-gap: 30px;
+}
+.welcome{
+    grid-area: welcome;
+    /* border: 2px solid black; */
+    min-height: 500px;
+    background: url(./image/155882-gejmer-lazurnyj-ustrojstvo_vvoda-purpur-dzhojstik-3840x2160.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    /* background-position-y: -20px;     */
+    transition: all 1s linear;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.albom1{
+    margin: 30px 0px 0px 0px;
+    display: grid;
+    grid-area: albom1;
+    /* border: 2px solid black; */
+    min-height: 200px;
+    width: 200px;
+    /* width: 208px; */
+    background: url(./image/AC\ KINGDOM\ PREORDER_STANDARD\ EDITION_EPIC_Key_Art_Portrait_640x854-640x854-288120c5573756cb988b6c1968cebd86.png)no-repeat center center;
+    background-size: cover;
+    background-position: top;
+    justify-self: center;
+    transition: all .3s linear;
+    
+}
+.albom2{
+    display: grid;
+    grid-area: albom2;
+    margin: 30px;
+    /* border: 2px solid black; */
+    min-height: 200px;
+    width: 200px;
+    justify-self: center;
+    background: url(./image/Без\ названия.jfif) no-repeat center center;
+    background-size: cover;
+    transition: all .3s linear;
+    
+    
+}
+.albom3{
+    display: grid;
+    grid-area: albom3;
+    margin: 30px;
+    /* border: 2px solid black; */
+    min-height: 200px;
+    width: 200px;
+    justify-self: center;
+    background: url(./image/Без\ названия\ \(1\).jfif)no-repeat center center;
+    background-size: cover;
+    background-position: top;
+    transition: all .3s linear; 
+}
+.welcome{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: start;
+    /* padding-left: 40px;   */
+    padding-top: 240px;
+    position: relative; 
+}
+.text1{
+    width: 660px;
+}
+.text1 h4{
+    color: rgba(255, 255, 255, 0.548);
+    /* background: #1a1a1a; */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.603), 0 0 10px rgba(255, 255, 255, 0.603);
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.text1 p{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.603), 0 0 10px rgba(255, 255, 255, 0.603);
+}
+.knopka{
+    position: absolute;
+    left: 60px;
+    top: 60px;
+    z-index: 3;
+}
+.knopka select{
+    height: 60px;
+    background-color: rgba(4, 28, 109, 0.384);
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    color: white;
+}
+
+/* .knopka.active{
+    padding-left: 12px;
+} */
+
+.albom1:hover{
+    min-height: 210px;
+    width: 210px;
+}
+.albom2:hover{
+    min-height: 210px;
+    width: 210px;
+}
+.albom3:hover{
+    min-height: 210px;
+    width: 210px;
+}
+.player{
+    height: 15%;
+    display: grid;
+    align-self: flex-end;
+    background-color: rgb(0, 147, 245);
+    justify-items: center;
+    display: none;
+    transition: all .8 ease-in;
+}
+.btnh{
+    height: 100%;
+    width: 30px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%; 
+    padding-left: 8px;
+    padding-top: 6px; 
+}
+.btnh span{
+    height: 16px;
+    width: 16px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    clip-path: polygon(100% 46%, 19% 0, 19% 100%);
+    transition: all .3s linear;
+}
+.btnh::after{
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 3px;
+    background-color: rgb(0, 0, 0);
+    /* display: none; */
+    transition: all .3s linear;
+    left: 17px;
+    /* overflow: hidden; */
+    opacity: 0;
+}
+.btnh::before{
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 3px;
+    background-color: rgb(0, 0, 0);
+    left: 9px;
+    /* display: none; */
+    transition: all .3s linear;
+    /* overflow: hidden; */
+    opacity: 0;
+}
+.btnh.active span{
+    display: none;
+    transition: all .3s linear;
+    opacity: 0;
+}
+.btnh.active::before{
+    display: block;
+    transition: all .3s linear;
+    opacity: 1;
+}
+.btnh.active::after{
+    display: block;
+    transition: all .3s linear;
+    opacity: 1;
+
+}
+.btnh2{
+    height: 100%;
+    width: 30px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%; 
+    padding-left: 8px;
+    padding-top: 6px; 
+}
+.btnh2 span{
+    height: 16px;
+    width: 16px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    clip-path: polygon(100% 46%, 19% 0, 19% 100%);
+    transition: all .3s linear;
+}
+.btnh2::after{
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 3px;
+    background-color: rgb(0, 0, 0);
+    /* display: none; */
+    transition: all .3s linear;
+    left: 17px;
+    /* overflow: hidden; */
+    opacity: 0;
+}
+.btnh2::before{
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 3px;
+    background-color: rgb(0, 0, 0);
+    left: 9px;
+    /* display: none; */
+    transition: all .3s linear;
+    /* overflow: hidden; */
+    opacity: 0;
+}
+.btnh2.active span{
+    display: none;
+    transition: all .3s linear;
+    opacity: 0;
+}
+.btnh2.active::before{
+    display: block;
+    transition: all .3s linear;
+    opacity: 1;
+}
+.btnh2.active::after{
+    display: block;
+    transition: all .3s linear;
+    opacity: 1;
+}
+.btnh3{
+    height: 100%;
+    width: 30px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%; 
+    padding-left: 8px;
+    padding-top: 6px; 
+}
+.btnh3 span{
+    height: 16px;
+    width: 16px;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    clip-path: polygon(100% 46%, 19% 0, 19% 100%);
+    transition: all .3s linear;
+}
+.btnh3::after{
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 3px;
+    background-color: rgb(0, 0, 0);
+    /* display: none; */
+    transition: all .3s linear;
+    left: 17px;
+    /* overflow: hidden; */
+    opacity: 0;
+}
+.btnh3::before{
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 3px;
+    background-color: rgb(0, 0, 0);
+    left: 9px;
+    /* display: none; */
+    transition: all .3s linear;
+    /* overflow: hidden; */
+    opacity: 0;
+}
+.btnh3.active span{
+    display: none;
+    transition: all .3s linear;
+    opacity: 0;
+}
+.btnh3.active::before{
+    display: block;
+    transition: all .3s linear;
+    opacity: 1;
+}
+.btnh3.active::after{
+    display: block;
+    transition: all .3s linear;
+    opacity: 1;
+
+}
+.albom1:hover .player{
+    display: grid;
+    transition: all .8 ease-in;
+}
+.albom2:hover .player{
+    display: grid;
+    transition: all .8 ease-in;
+}
+.albom3:hover .player{
+    display: grid;
+    transition: all .8 ease-in;
+}
+.welcome.active{
+    position: relative;
+    left: -1400px;
+}
+.test{
+    height: 100%;
+    width: 100%;
+    min-height: 500px;
+    position: absolute;
+    top: 0;
+    left: -1500px;
+    z-index: 2;
+    background: url(./image/assassins\ creed\ valhalla-pictures.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 80px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 1s linear;
+
+}
+.test_up h1{
+    color: #FFFFFF;
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+font-size: 60px
+}
+.steam{
+    height: 180px;
+    /* padding-top: 54px;
+    padding-bottom: 54px; */
+    padding-right: 360px;
+    padding-left: 360px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#block_flex{
+    margin-top: 40px;
+    height: 441px;
+    /* background-color: #252525; */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
+    top: 0;
+    left: -1500px;
+    transition: all 1s linear;
+}
+.steam a{
+    padding: 20px 80px;
+    background-color: rgb(13, 46, 63);
+    border-radius: 40px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: all .4s ease;
+}
+.steam button{
+    height: 60px;
+    width: 220px;
+    background-color: rgb(13, 46, 63);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    font-size: 17px;
+    transition: all .4s ease;
+}
+.steam a:hover{
+    background-color: #252525;
+    color: ghostwhite;
+    filter: blur(1px);
+}
+.steam button:hover{
+    background-color: #252525;
+    color: ghostwhite;
+    filter: blur(1px);
+    cursor: pointer;
+}
+.block{
+    height: 340px;
+    width: 340px;
+    background-color: #252525cb;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 1s linear;
+}
+.block h1{
+    padding-bottom: 14px;
+    border-bottom: 1px solid white;
+    margin-bottom: 15px;
+    font-family: 'Rowdies', cursive;
+}
+.block p{
+    font-size: 15px;
+    font-family: 'Supermercado One', cursive;
+}
+.block:nth-child(3) p {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.block:hover{
+    -webkit-box-shadow: 5px 5px 15px 5px #FFFFFF; 
+    box-shadow: 5px 5px 15px 5px #FFFFFF;
+}
+.test1{
+    height: 100%;
+    width: 100%;
+    min-height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    z-index: 3;
+    background: url(./image/ty8nVKJ7m5oQgoqE7TAEVE.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 80px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 1s linear;
+}
+.test2{
+    height: 100%;
+    width: 100%;
+    min-height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    z-index: 3;
+    background: url(./image/01-big-far-cry-6-test.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-top: 80px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 1s linear;
+}
